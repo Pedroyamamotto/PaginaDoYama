@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Clock } from "lucide-react";
 
 export function Footer() {
   const footerLinks = {
@@ -16,7 +16,7 @@ export function Footer() {
 
       <div className="container mx-auto px-6 py-16 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-12 mb-12">
-          {/* Brand Column */}
+          {/* Brand & Contact Column */}
           <div className="lg:col-span-2">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -34,18 +34,15 @@ export function Footer() {
                 Atendimento inteligente via WhatsApp com IA que reduz custos, 
                 nunca perde leads e oferece suporte 24/7 para seu negócio.
               </p>
+              
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-slate-400 text-sm">
-                  <Mail size={16} className="text-emerald-400" />
-                  <span>contato@yamamotto.com.br</span>
-                </div>
-                <div className="flex items-center gap-3 text-slate-400 text-sm">
                   <Phone size={16} className="text-emerald-400" />
-                  <span>Atendimento via WhatsApp</span>
+                  <span>+55 (11) 99333-0919</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-400 text-sm">
-                  <MapPin size={16} className="text-emerald-400" />
-                  <span>Brasil</span>
+                  <Mail size={16} className="text-emerald-400" />
+                  <span>atendimento@yamamotto.com.br</span>
                 </div>
               </div>
             </motion.div>
@@ -76,6 +73,57 @@ export function Footer() {
             </motion.div>
           ))}
         </div>
+
+        {/* Address & Hours Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="grid md:grid-cols-2 gap-8 mb-12 pb-8 border-b border-slate-900"
+        >
+          {/* Address */}
+          <div>
+            <h4 className="text-white mb-4 flex items-center gap-2">
+              <MapPin size={18} className="text-emerald-400" />
+              Endereço
+            </h4>
+            <div className="text-slate-400 text-sm space-y-1">
+              <p>Rochaverá Corporate Tower - Torre B (Marble Tower)</p>
+              <p>Av. das Nações Unidas, 14.171 - 15º andar</p>
+              <p>CEP: 04794-000</p>
+              <p>São Paulo - Brasil</p>
+              <p className="text-slate-500 text-xs mt-3 italic">
+                Atendimento presencial necessita prévio agendamento.
+              </p>
+              <a 
+                href="#" 
+                className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors mt-2"
+              >
+                <MapPin size={14} />
+                Veja no Mapa
+              </a>
+            </div>
+          </div>
+
+          {/* Hours */}
+          <div>
+            <h4 className="text-white mb-4 flex items-center gap-2">
+              <Clock size={18} className="text-blue-400" />
+              Horário de Atendimento
+            </h4>
+            <div className="text-slate-400 text-sm space-y-2">
+              <div className="flex justify-between">
+                <span>Seg. a Sex.</span>
+                <span className="text-emerald-400">08h às 17:30h</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Sáb. e Dom.</span>
+                <span className="text-slate-500">Fechado</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Bottom Bar */}
         <motion.div
