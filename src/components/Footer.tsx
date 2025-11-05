@@ -1,0 +1,130 @@
+import { motion } from "motion/react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
+
+export function Footer() {
+  const footerLinks = {
+    Produto: ["Recursos", "Integrações", "Preços", "Demonstração"],
+    Empresa: ["Sobre Nós", "Yamamotto", "Depoimentos", "Contato"],
+    Suporte: ["FAQ", "Documentação", "Suporte", "WhatsApp"],
+    Legal: ["Privacidade", "Termos de Uso", "LGPD", "Segurança"],
+  };
+
+  return (
+    <footer className="bg-slate-950 border-t border-slate-900 relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
+
+      <div className="container mx-auto px-6 py-16 relative z-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-12 mb-12">
+          {/* Brand Column */}
+          <div className="lg:col-span-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white">🤖</span>
+                </div>
+                <span className="text-white">Yama AI</span>
+              </div>
+              <p className="text-slate-400 text-sm mb-6 max-w-xs">
+                Atendimento inteligente via WhatsApp com IA que reduz custos, 
+                nunca perde leads e oferece suporte 24/7 para seu negócio.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 text-slate-400 text-sm">
+                  <Mail size={16} className="text-emerald-400" />
+                  <span>contato@yamamotto.com.br</span>
+                </div>
+                <div className="flex items-center gap-3 text-slate-400 text-sm">
+                  <Phone size={16} className="text-emerald-400" />
+                  <span>Atendimento via WhatsApp</span>
+                </div>
+                <div className="flex items-center gap-3 text-slate-400 text-sm">
+                  <MapPin size={16} className="text-emerald-400" />
+                  <span>Brasil</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Links Columns */}
+          {Object.entries(footerLinks).map(([category, links], index) => (
+            <motion.div
+              key={category}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
+              <h4 className="text-white mb-4">{category}</h4>
+              <ul className="space-y-3">
+                {links.map((link) => (
+                  <li key={link}>
+                    <a
+                      href="#"
+                      className="text-slate-400 text-sm hover:text-emerald-400 transition-colors"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Bottom Bar */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="pt-8 border-t border-slate-900"
+        >
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            {/* Copyright */}
+            <p className="text-slate-500 text-sm">
+              © 2025 Yamamotto. Todos os direitos reservados.
+            </p>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-4">
+              {[
+                { icon: Linkedin, label: "LinkedIn" },
+                { icon: Twitter, label: "Twitter" },
+                { icon: Github, label: "GitHub" },
+              ].map((social) => (
+                <motion.a
+                  key={social.label}
+                  href="#"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center hover:border-emerald-500/30 transition-all group"
+                  aria-label={social.label}
+                >
+                  <social.icon
+                    size={18}
+                    className="text-slate-400 group-hover:text-emerald-400 transition-colors"
+                  />
+                </motion.a>
+              ))}
+            </div>
+
+            {/* Badges */}
+            <div className="flex items-center gap-3">
+              <div className="px-3 py-1 bg-slate-900 border border-slate-800 rounded text-slate-400 text-xs">
+                🔒 LGPD Compliant
+              </div>
+              <div className="px-3 py-1 bg-slate-900 border border-slate-800 rounded text-slate-400 text-xs">
+                ✓ ISO 27001
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </footer>
+  );
+}
