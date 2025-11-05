@@ -16,7 +16,7 @@ export function HeroSection() {
       </div>
 
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -33,12 +33,12 @@ export function HeroSection() {
             </h1>
 
             <p className="text-slate-300 text-xl max-w-xl">
-              Ofereça suporte 24h via WhatsApp com IA que processa manuais, entende documentos visuais e transfere para atendimento humano quando necessário.
+              Ofereça suporte 24h via WhatsApp com IA que aprende com seus documentos e manuais, e transfere para atendimento humano quando necessário.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white group">
-                Quero automatizar meu atendimento
+                Quero automatizar meu atendimento e reduzir meu custo
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </Button>
               <Button size="lg" variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800">
@@ -46,18 +46,31 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-800">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-slate-800">
               <div>
-                <div className="text-emerald-400 mb-1">IA</div>
-                <div className="text-slate-400 text-sm">Atendimento inteligente</div>
+                <div className="text-emerald-400 mb-1 flex items-center gap-2">
+                  <Calendar size={16} />
+                  <span>Agenda</span>
+                </div>
+                <div className="text-slate-400 text-sm">Agendamento inteligente</div>
               </div>
               <div>
                 <div className="text-blue-400 mb-1">24/7</div>
                 <div className="text-slate-400 text-sm">Sempre disponível</div>
               </div>
               <div>
-                <div className="text-emerald-400 mb-1">RAG</div>
-                <div className="text-slate-400 text-sm">Visão computacional</div>
+                <div className="text-emerald-400 mb-1 flex items-center gap-2">
+                  <Zap size={16} />
+                  <span>Auto</span>
+                </div>
+                <div className="text-slate-400 text-sm">Automações e calendário</div>
+              </div>
+              <div>
+                <div className="text-blue-400 mb-1 flex items-center gap-2">
+                  <Database size={16} />
+                  <span>Smart</span>
+                </div>
+                <div className="text-slate-400 text-sm">Base de conhecimento</div>
               </div>
             </div>
           </motion.div>

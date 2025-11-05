@@ -77,7 +77,7 @@ export function CTASection() {
                 className="text-slate-300 text-xl max-w-2xl mx-auto"
               >
                 Receba uma demonstração e veja como o Yama AI pode revolucionar seu negócio. 
-                Automatize atendimento, nunca mais perca leads e ofereça suporte 24h.
+                Automatize atendimento, reduza custos, nunca mais perca leads e ofereça suporte 24h.
               </motion.p>
 
               {/* CTA Buttons */}
@@ -89,9 +89,15 @@ export function CTASection() {
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
               >
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white group px-8">
-                    Receber Demonstração
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                  <Button 
+                    size="lg" 
+                    className="bg-emerald-500 hover:bg-emerald-600 text-white group px-8"
+                    asChild
+                  >
+                    <a href="mailto:atendimento@yamamotto.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20Demonstra%C3%A7%C3%A3o%20Yama%20AI">
+                      Receber Demonstração
+                      <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                    </a>
                   </Button>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -99,8 +105,15 @@ export function CTASection() {
                     size="lg"
                     variant="outline"
                     className="border-slate-700 text-slate-300 hover:bg-slate-800 px-8"
+                    asChild
                   >
-                    Falar com Especialista no WhatsApp
+                    <a 
+                      href="https://wa.me/5511993330919?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20especialista%20sobre%20o%20Yama.IA%20%E2%80%93%20Agente%20de%20Intelig%C3%AAncia%20Artificial." 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      Falar com Especialista no WhatsApp
+                    </a>
                   </Button>
                 </motion.div>
               </motion.div>

@@ -1,6 +1,5 @@
 import { HeroSection } from "./components/HeroSection";
 import { ArchitectureSection } from "./components/ArchitectureSection";
-import { VisionSection } from "./components/VisionSection";
 import { ChatSection } from "./components/ChatSection";
 import { AutomationSection } from "./components/AutomationSection";
 import { SecuritySection } from "./components/SecuritySection";
@@ -14,7 +13,6 @@ export default function App() {
     <div className="min-h-screen bg-slate-950">
       <HeroSection />
       <ArchitectureSection />
-      <VisionSection />
       <ChatSection />
       <AutomationSection />
       <SecuritySection />

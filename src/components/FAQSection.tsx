@@ -12,6 +12,16 @@ export function FAQSection() {
         "Sim! O Yama AI é totalmente escalável e se adapta às necessidades de negócios de todos os tamanhos, desde startups até grandes corporações. Oferecemos planos flexíveis para cada etapa do seu crescimento.",
     },
     {
+      question: "Como o Yama AI aprende sobre meu negócio?",
+      answer:
+        "O YAMA AI não inventa respostas. Ele pesquisa na base de conhecimento fornecida por sua empresa manuais técnicos, regras, processos e páginas oficiais para orientar seus clientes com precisão, consistência e fontes rastreáveis. Assim, você tem total controle sobre as informações que a IA usa.",
+    },
+    {
+      question: "Preciso contratar uma plataforma de mensageria?",
+      answer:
+        "Não! Nosso sistema opera de forma integrada ao WhatsApp Business, dispensando o uso de plataformas de mensageria. Assim, você continua utilizando seu número normalmente no celular, com autonomia total e sem gastos extras com mensagens.",
+    },
+    {
       question: "Preciso de uma equipe técnica para usar o Yama AI?",
       answer:
         "Não! O Yama AI foi desenvolvido para ser simples e intuitivo. Nossa equipe cuida de toda a configuração inicial e treinamento da IA com seus dados. Você só precisa fornecer sua base de conhecimento e estaremos prontos para começar.",
@@ -24,7 +34,7 @@ export function FAQSection() {
     {
       question: "Meus dados e os dos meus clientes estarão seguros?",
       answer:
-        "Absolutamente! Desenvolvemos o Yama AI seguindo as melhores práticas de segurança da informação. Utilizamos criptografia, controles de acesso e armazenamento seguro em servidores no Brasil. Seus dados e os de seus clientes são tratados com o máximo cuidado e nunca são compartilhados com terceiros.",
+        "Entendemos que todo sistema está sujeito a riscos. Por isso, tratamos a segurança das informações como prioridade, adotando medidas rigorosas para prevenir e mitigar qualquer possibilidade de vazamento de dados. Utilizamos criptografia, controles de acesso e armazenamento seguro em servidores no Brasil.",
     },
   ];
 
@@ -104,9 +114,14 @@ export function FAQSection() {
             <p className="text-slate-400 mb-6">
               Nossa equipe está pronta para ajudar você a entender como o Yama AI pode transformar seu atendimento.
             </p>
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-all">
+            <a 
+              href="https://wa.me/5511993330919?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20especialista%20sobre%20o%20Yama.IA%20%E2%80%93%20Agente%20de%20Intelig%C3%AAncia%20Artificial."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-all"
+            >
               Falar com um Especialista
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>

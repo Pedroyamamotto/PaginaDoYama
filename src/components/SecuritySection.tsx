@@ -1,8 +1,13 @@
 import { motion } from "motion/react";
-import { Shield, Key, FileText, Lock, CheckCircle2 } from "lucide-react";
+import { Shield, Key, FileText, Lock, CheckCircle2, ShieldAlert } from "lucide-react";
 
 export function SecuritySection() {
   const securityFeatures = [
+    {
+      icon: ShieldAlert,
+      title: "Firewall Anti-Invasão",
+      description: "Proteção contra prompt injection e tentativas de invasão com monitoramento em tempo real",
+    },
     {
       icon: Key,
       title: "Autenticação Individual",

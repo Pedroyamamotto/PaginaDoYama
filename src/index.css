@@ -76,7 +76,6 @@
     --color-slate-300: oklch(.869 .022 252.894);
     --color-slate-400: oklch(.704 .04 256.788);
     --color-slate-500: oklch(.554 .046 257.417);
-    --color-slate-600: oklch(.446 .043 257.281);
     --color-slate-700: oklch(.372 .044 257.287);
     --color-slate-800: oklch(.279 .041 260.031);
     --color-slate-900: oklch(.208 .042 265.755);
@@ -115,7 +114,6 @@
     --blur-md: 12px;
     --blur-xl: 24px;
     --blur-3xl: 64px;
-    --aspect-video: 16 / 9;
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     --default-font-family: var(--font-sans);
@@ -458,10 +456,6 @@
     inset: calc(var(--spacing) * 16);
   }
 
-  .-top-4 {
-    top: calc(var(--spacing) * -4);
-  }
-
   .-top-6 {
     top: calc(var(--spacing) * -6);
   }
@@ -520,10 +514,6 @@
 
   .right-10 {
     right: calc(var(--spacing) * 10);
-  }
-
-  .-bottom-4 {
-    bottom: calc(var(--spacing) * -4);
   }
 
   .-bottom-6 {
@@ -660,10 +650,6 @@
     margin-bottom: calc(var(--spacing) * 6);
   }
 
-  .mb-8 {
-    margin-bottom: calc(var(--spacing) * 8);
-  }
-
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
@@ -698,10 +684,6 @@
 
   .aspect-square {
     aspect-ratio: 1;
-  }
-
-  .aspect-video {
-    aspect-ratio: var(--aspect-video);
   }
 
   .size-4 {
@@ -830,16 +812,8 @@
     width: calc(var(--spacing) * 3);
   }
 
-  .w-4\/6 {
-    width: 66.6667%;
-  }
-
   .w-5 {
     width: calc(var(--spacing) * 5);
-  }
-
-  .w-5\/6 {
-    width: 83.3333%;
   }
 
   .w-6 {
@@ -958,10 +932,6 @@
 
   .cursor-pointer {
     cursor: pointer;
-  }
-
-  .grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .grid-cols-2 {
@@ -1276,20 +1246,6 @@
     background-color: var(--secondary);
   }
 
-  .bg-slate-700 {
-    background-color: var(--color-slate-700);
-  }
-
-  .bg-slate-700\/50 {
-    background-color: color-mix(in srgb, oklch(.372 .044 257.287) 50%, transparent);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-slate-700\/50 {
-      background-color: color-mix(in oklab, var(--color-slate-700) 50%, transparent);
-    }
-  }
-
   .bg-slate-800 {
     background-color: var(--color-slate-800);
   }
@@ -1316,16 +1272,6 @@
 
   .bg-slate-900 {
     background-color: var(--color-slate-900);
-  }
-
-  .bg-slate-900\/30 {
-    background-color: color-mix(in srgb, oklch(.208 .042 265.755) 30%, transparent);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-slate-900\/30 {
-      background-color: color-mix(in oklab, var(--color-slate-900) 30%, transparent);
-    }
   }
 
   .bg-slate-900\/50 {
@@ -1402,17 +1348,6 @@
   @supports (color: color-mix(in lab, red, red)) {
     .from-blue-500\/10 {
       --tw-gradient-from: color-mix(in oklab, var(--color-blue-500) 10%, transparent);
-    }
-  }
-
-  .from-blue-500\/20 {
-    --tw-gradient-from: color-mix(in srgb, oklch(.623 .214 259.815) 20%, transparent);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .from-blue-500\/20 {
-      --tw-gradient-from: color-mix(in oklab, var(--color-blue-500) 20%, transparent);
     }
   }
 
@@ -1612,17 +1547,6 @@
   @supports (color: color-mix(in lab, red, red)) {
     .to-emerald-500\/5 {
       --tw-gradient-to: color-mix(in oklab, var(--color-emerald-500) 5%, transparent);
-    }
-  }
-
-  .to-emerald-500\/10 {
-    --tw-gradient-to: color-mix(in srgb, oklch(.696 .17 162.48) 10%, transparent);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .to-emerald-500\/10 {
-      --tw-gradient-to: color-mix(in oklab, var(--color-emerald-500) 10%, transparent);
     }
   }
 
@@ -1870,10 +1794,6 @@
 
   .text-slate-500 {
     color: var(--color-slate-500);
-  }
-
-  .text-slate-600 {
-    color: var(--color-slate-600);
   }
 
   .text-white {
@@ -2333,6 +2253,12 @@
   @media (width >= 64rem) {
     .lg\:grid-cols-6 {
       grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
+
+  @media (width >= 64rem) {
+    .lg\:gap-16 {
+      gap: calc(var(--spacing) * 16);
     }
   }
 

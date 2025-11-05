@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Clock } from "lucide-react";
 
 export function Footer() {
   const footerLinks = {
@@ -97,7 +97,9 @@ export function Footer() {
                 Atendimento presencial necessita prévio agendamento.
               </p>
               <a 
-                href="#" 
+                href="https://g.page/Yamamotto?share" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors mt-2"
               >
                 <MapPin size={14} />
@@ -142,13 +144,15 @@ export function Footer() {
             {/* Social Links */}
             <div className="flex items-center gap-4">
               {[
-                { icon: Linkedin, label: "LinkedIn" },
-                { icon: Twitter, label: "Twitter" },
-                { icon: Github, label: "GitHub" },
+                { icon: Facebook, label: "Facebook", url: "https://www.facebook.com/YEServicesBR/" },
+                { icon: Instagram, label: "Instagram", url: "https://www.instagram.com/yamamotto_fechaduras_digitais/" },
+                { icon: Youtube, label: "YouTube", url: "https://www.youtube.com/channel/UCnwxNfzQQxVv6z6TfmqyPXg" },
               ].map((social) => (
                 <motion.a
                   key={social.label}
-                  href="#"
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   className="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center hover:border-emerald-500/30 transition-all group"
                   aria-label={social.label}

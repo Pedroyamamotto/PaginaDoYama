@@ -6,7 +6,7 @@ export function ChatSection() {
     {
       icon: DatabaseIcon,
       title: "Treinamento com Seus Dados",
-      description: "O Yama aprende com sua base de conhecimento (RAG)",
+      description: "O Yama aprende com sua base de conhecimento e documentos",
     },
     {
       icon: Brain,
@@ -172,7 +172,7 @@ export function ChatSection() {
                 <div className="text-slate-400 text-sm">Contexto Preservado</div>
               </div>
               <div className="text-center p-4 bg-slate-900/50 border border-slate-800 rounded-xl">
-                <div className="text-blue-400 mb-1">&lt; 2s</div>
+                <div className="text-blue-400 mb-1">30s</div>
                 <div className="text-slate-400 text-sm">Tempo de Resposta</div>
               </div>
             </div>
