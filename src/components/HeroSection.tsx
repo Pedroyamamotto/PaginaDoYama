@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { ArrowRight, Bot, Database, Calendar, Zap } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import heroImage from "figma:asset/884b398121ce09243792d3846e6c042a0efc5af4.png";
+import yamaBanner from "../assets/YamaBaner.jpg";
 
 export function HeroSection() {
   return (
@@ -87,7 +88,7 @@ export function HeroSection() {
               <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-transparent to-blue-500/20 z-10"></div>
                 <ImageWithFallback
-                  src="../Public/YamaBaner.jpg"
+                  src={yamaBanner}
                   alt="Colaboração entre atendente humano e IA"
                   className="w-full h-auto object-contain"
                 />
