@@ -87,7 +87,7 @@ export function HeroSection() {
               <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-transparent to-blue-500/20 z-10"></div>
                 <ImageWithFallback
-                  src={heroImage}
+                  src="../Public/YamaBaner.jpg"
                   alt="Colaboração entre atendente humano e IA"
                   className="w-full h-auto object-contain"
                 />
