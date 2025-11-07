@@ -29,21 +29,29 @@ export function HeroSection() {
               <span className="text-emerald-400">✨ Yama AI by Yamamotto</span>
             </div>
 
-            <h1 className="text-white max-w-2xl">
+            {/* Ajuste dos textos conforme imagem */}
+            <h2 className="text-slate-300 text-lg font-medium max-w-2xl text-center lg:text-left">
               Atendimento inteligente com IA: otimize operações e nunca mais perca leads
-            </h1>
+            </h2>
 
-            <p className="text-slate-300 text-xl max-w-xl">
+            <p className="text-white text-2xl sm:text-3xl font-semibold max-w-2xl leading-snug text-center lg:text-left">
               Ofereça suporte 24h via WhatsApp com IA que aprende com seus documentos e manuais, e transfere para atendimento humano quando necessário.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white group">
-                Quero automatizar meu atendimento e reduzir meu custo
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-              </Button>
-              <Button size="lg" variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800">
-                Ver Demonstração
+              <Button
+                size="lg"
+                className="bg-emerald-500 hover:bg-emerald-100 text-white group px-8 py-4 text-lg font-semibold flex items-center justify-center min-w-[100px]"
+                asChild
+              >
+                <a
+                  href="https://wa.me/5511993330919?text=Ol%C3%A1!%20Quero%20automatizar%20meu%20atendimento%20e%20reduzir%20meu%20custo%20com%20o%20Yama%20AI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full block text-center"
+                >
+                  Quero automatizar meu atendimento e reduzir meu custo
+                </a>
               </Button>
             </div>
 
@@ -93,42 +101,6 @@ export function HeroSection() {
                   className="w-full h-auto object-contain"
                 />
               </div>
-
-              {/* Floating Integration Cards */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="absolute -left-4 top-1/4 bg-slate-900/90 backdrop-blur-sm border border-emerald-500/30 rounded-xl p-4 shadow-xl hidden lg:block"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-emerald-500/20 rounded-lg">
-                    <Bot className="text-emerald-400" size={20} />
-                  </div>
-                  <div>
-                    <div className="text-white text-sm">IA Generativa</div>
-                    <div className="text-slate-400 text-xs">Gemini Pro</div>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                className="absolute -right-4 top-2/3 bg-slate-900/90 backdrop-blur-sm border border-blue-500/30 rounded-xl p-4 shadow-xl hidden lg:block"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-blue-500/20 rounded-lg">
-                    <Zap className="text-blue-400" size={20} />
-                  </div>
-                  <div>
-                    <div className="text-white text-sm">WhatsApp</div>
-                    <div className="text-slate-400 text-xs">24/7 Ativo</div>
-                  </div>
-                </div>
-              </motion.div>
-
               {/* Decorative Elements */}
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-emerald-500/20 rounded-full blur-3xl"></div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl"></div>

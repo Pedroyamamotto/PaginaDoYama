@@ -4,11 +4,11 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export function CTASection() {
   const techLogos = [
-    { name: "WhatsApp", emoji: "💬" },
-    { name: "API REST", emoji: "🔌" },
-    { name: "Google Calendar", emoji: "📅" },
-    { name: "Supabase", emoji: "⚡" },
-    { name: "Yamamotto", emoji: "🤖" },
+    { name: "WhatsApp", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" },
+    { name: "Google Calendar", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
+    { name: "Supabase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
+    { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+    { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
   ];
 
   return (
@@ -76,7 +76,7 @@ export function CTASection() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-slate-300 text-xl max-w-2xl mx-auto"
               >
-                Receba uma demonstração e veja como o Yama AI pode revolucionar seu negócio. 
+                veja como o Yama AI pode revolucionar seu negócio. 
                 Automatize atendimento, reduza custos, nunca mais perca leads e ofereça suporte 24h.
               </motion.p>
 
@@ -88,34 +88,6 @@ export function CTASection() {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
               >
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button 
-                    size="lg" 
-                    className="bg-emerald-500 hover:bg-emerald-600 text-white group px-8"
-                    asChild
-                  >
-                    <a href="mailto:atendimento@yamamotto.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20Demonstra%C3%A7%C3%A3o%20Yama%20AI">
-                      Receber Demonstração
-                      <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                    </a>
-                  </Button>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-slate-700 text-slate-300 hover:bg-slate-800 px-8"
-                    asChild
-                  >
-                    <a 
-                      href="https://wa.me/5511993330919?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20especialista%20sobre%20o%20Yama.IA%20%E2%80%93%20Agente%20de%20Intelig%C3%AAncia%20Artificial." 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      Falar com Especialista no WhatsApp
-                    </a>
-                  </Button>
-                </motion.div>
               </motion.div>
 
               {/* Trust Indicators */}
@@ -161,7 +133,7 @@ export function CTASection() {
                 whileHover={{ scale: 1.1, y: -4 }}
                 className="flex flex-col items-center gap-2 p-4 bg-slate-800/30 border border-slate-800 rounded-xl hover:border-emerald-500/30 transition-all cursor-pointer"
               >
-                <span className="text-3xl">{tech.emoji}</span>
+                <img src={tech.logo} alt={tech.name} className="w-10 h-10 object-contain" />
                 <span className="text-slate-400 text-sm">{tech.name}</span>
               </motion.div>
             ))}
