@@ -45,7 +45,7 @@ export function HeroSection() {
                 asChild
               >
                 <a
-                  href="https://wa.me/5511993330919?text=Ol%C3%A1!%20Quero%20automatizar%20meu%20atendimento%20e%20reduzir%20meu%20custo%20com%20o%20Yama%20AI"
+                  href="https://wa.me/5511973088373?text=Ol%C3%A1!%20Quero%20automatizar%20meu%20atendimento%20e%20reduzir%20meu%20custo%20com%20o%20Yama%20AI"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full block text-center"

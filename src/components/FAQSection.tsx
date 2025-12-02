@@ -115,7 +115,7 @@ export function FAQSection() {
               Nossa equipe está pronta para ajudar você a entender como o Yama AI pode transformar seu atendimento.
             </p>
             <a 
-              href="https://wa.me/5511993330919?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20especialista%20sobre%20o%20Yama.IA%20%E2%80%93%20Agente%20de%20Intelig%C3%AAncia%20Artificial."
+              href="https://wa.me/5511973088373?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20especialista%20sobre%20o%20Yama.IA%20%E2%80%93%20Agente%20de%20Intelig%C3%AAncia%20Artificial."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-all"
